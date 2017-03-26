@@ -31,10 +31,10 @@ public class FirstWordCount  {
         config.setDebug(true); // debug模式
 
         // 本地模式运行
-        // LocalCluster localCluster = new LocalCluster();
-        //localCluster.submitTopology("mywordcount",config,topology);
+        LocalCluster localCluster = new LocalCluster();
+        localCluster.submitTopology("mywordcount",config,topology);
 
         // 集群模式运行
-        StormSubmitter.submitTopology("mywordcount",config,topology);
+        //StormSubmitter.submitTopology("mywordcount",config,topology);
     }
 }
